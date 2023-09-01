@@ -16,9 +16,26 @@ input.addEventListener('click', function() {
     for (let i = 1; i < 101; i++) {
 
         let cell = document.createElement('div');
-        cell.innerText = i;
-        cell.setAttribute("class",'p-5 border border-info text-light text-center')
+        cell.setAttribute("class",'square py-5 border border-info text-light text-center')
         domElement.append(cell)
+
+        cell.addEventListener('click', function() {
+
+            console.log(i);
+            cell.innerText = i;
+            cell.classList.add("bg-info")
+
+            cell.addEventListener('click', function() {
+
+                cell.innerText = '' 
+                cell.classList.remove("bg-info")
+                
+            })
+
+        })
+
+        
+
        
     }
 
@@ -26,6 +43,3 @@ input.addEventListener('click', function() {
     
 })
 
-function highlight() {
-    
-}
