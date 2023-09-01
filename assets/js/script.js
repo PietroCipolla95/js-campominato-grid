@@ -8,6 +8,7 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 */
 
 const input = document.querySelector('button');
+let cell = document.createElement('div');
 
 input.addEventListener('click', function() {
 
@@ -20,26 +21,23 @@ input.addEventListener('click', function() {
         domElement.append(cell)
 
         cell.addEventListener('click', function() {
-
-            console.log(i);
-            cell.innerText = i;
-            cell.classList.add("bg-info")
-
-            cell.addEventListener('click', function() {
-
-                cell.innerText = '' 
-                cell.classList.remove("bg-info")
-                
-            })
-
-        })
-
         
-
-       
+                    console.log(i);
+                    cell.innerText = i;
+                    cell.classList.add("bg-info")
+        
+                    cell.addEventListener('click', function() {
+        
+                        cell.innerText = '' 
+                        cell.classList.remove("bg-info")
+                        
+                    })
+        
+                })
+  
     }
 
     input.classList.add('d-none')
+
     
 })
-
