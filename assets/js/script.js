@@ -11,14 +11,15 @@ const input = document.querySelector('button');
 
 input.addEventListener('click', function() {
 
+    const domElement = document.querySelector('.print');
+
     for (let i = 1; i < 101; i++) {
 
-        let valor = document.createElement('span');
-        valor = i;
-        
-            
+        let valor = document.createElement('div');
+        valor.innerText = i;
+        valor.setAttribute("class",'p-5 border border-info text-light text-center')
+        domElement.append(valor)
+       
     }
-
-    document.getElementById('print').append(valor);
     
 })
