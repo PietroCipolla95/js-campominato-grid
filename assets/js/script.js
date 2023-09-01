@@ -15,11 +15,17 @@ input.addEventListener('click', function() {
 
     for (let i = 1; i < 101; i++) {
 
-        let valor = document.createElement('div');
-        valor.innerText = i;
-        valor.setAttribute("class",'p-5 border border-info text-light text-center')
-        domElement.append(valor)
+        let cell = document.createElement('div');
+        cell.innerText = i;
+        cell.setAttribute("class",'p-5 border border-info text-light text-center')
+        domElement.append(cell)
        
     }
+
+    input.classList.add('d-none')
     
 })
+
+function highlight() {
+    
+}
